@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style-page-merci.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Association de défense des canidés de la ville de Brest</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Association de défense des canidés de la ville de Brest</h1>
+    </div>
+    
+        <div class="fusionnage">
+            <br>
+            <br><br><br><br>
+            <div class="merci"><span><h1>MERCI !</h1>
+            <h3>Nous vous recontacterons sous 48h</h3></span>
+            </div>
+            <br><br><br><br>
+                <div class="liste_donnateurs"><span>
+                    <span class="gras"> Nos généreux donateurs :</span>
+                    {% for don in donnateurs %}
+                    <p><img src="{{ url_for('static', filename= 'coeurtrans.png') }}" alt="pattes" width="40" height="30">Merci à <span class="gras">{{ don["prenom"] }} {{ don["nom"] }}</span> joignable sur {{ don["email"] }} pour son don de {{ don["don_fin"] }} {{ don["don_tps"] }} {{ don["don_mat"] }}</p>
+                    {% endfor %}</span>
+                </div>
+                {% block coucou %} 
+                <div class="marquee-rtl"><p>A l'heure actuelle, la somme des dons financiers s'élève à : <span class="gras">{{sum}} €.</span> Merci pour eux !</p></div> {% endblock %}
+            <br><br><br>
+        </div>
+        <a href="{{url_for('index')}}"><button> Retour page principale </button> </a>
+
+</body>
+</html>

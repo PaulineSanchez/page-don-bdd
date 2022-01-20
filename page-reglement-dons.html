@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style-page-reglement-dons.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Association de défense des canidés de la ville de Brest</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Association de défense des canidés de la ville de Brest</h1>
+    </div>
+
+    <div class="fusionnage">
+        <br>
+        <br>
+        <h2><span class="texte-reglement">Réglement des dons :</span></h2>
+        <h4><span class="texte-reglement">Avant de faire un don vérifiez vos capicités financières.</span></h4>
+        <h4><span class="texte-reglement">Faire un don vous engage.</span></h4>
+        <h4><span class="texte-reglement">Lors d'un don matériel, notre équipe vous propose de venir à votre domicile pour collecter les différents biens. Vous pouvez aussi venir les déposer à notre refuge du lundi au samedi de 8h00 à 20h00.</span></h4>
+        <h4><span class="texte-reglement">Lors d'un don de temps, nous vous recontacterons pour connaître vos disponibilités et nous vous contacterons par téléphone lorsque nous avons un besoin urgent de personnel.</span></h4>
+        <h4><span class="texte-reglement">Nous nous engageons à ne pas utiliser vos e-mails et numéros de téléphone à des fins commerciales.</span></h4>
+        <h4><span class="texte-reglement">Lors d'un don financier, vous avez plusieurs possibilités de paiement, nous vous contacterons dans les plus brefs délais (48h max) pour en discuter avec vous.</span></h4>
+        <h4><span class="texte-reglement">Vos dons financiers ne serviront JAMAIS à payer un membre de l'association ou une quelconque autre personne.</span></h4>
+        <h4><span class="texte-reglement">Les seuls bénéficiaires des dons sont les chiens de Brest.</span></h4> 
+        <h3><span class="texte-reglement">Merci !</h3></span>
+        <br><br><br><br><br><br><br><br>
+    </div>
+    <a href="{{url_for('formulaire')}}"><button> Retour formulaire de dons </button> </a>
+    <a href="{{url_for('index')}}"><button> Retour page principale </button> </a>
+</body>
+</html>

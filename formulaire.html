@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style-formulaire.css') }}">
+    <title>Formulaire de don</title>
+</head>
+
+
+<div class="header"  id="pageformulaire">
+  <h1>Association de défense des canidés de la ville de Brest</h1>
+</div>
+
+<body>
+  <form method="post">
+    <div class="fusionnage">
+        <div class="split left">
+          <div class="centered">
+            <h1>Mon Don</h1> 
+            <h3>Je souhaite faire un don</h3>
+              <span class="texte-gras">Financier</span> <br>
+              <label for="montant">Je souhaite donner :</label>
+              <input type="text" name="montant" placeholder="Montant en chiffres" value="{{request.form['montant']}}" size="30" maxlength="1000"/> € <br> <br> <br>
+              <span class="texte-gras">De Temps</span> <br>
+              Je souhaite
+              <select name="typetemps" size="1" value="{{request.form['typetemps']}}">
+                <option>Rien</option>
+                <option>Faire des rondes avec notre groupe pour repérer les abus</option>
+                <option>Garder un animal en détresse à votre domicile</option> 
+                <option>Promener des animaux en détresse</option> 
+              </select> <br> <br> <br>
+              <span class="texte-gras">Matériel</span><br>
+              Je souhaite faire un don de/d'
+              <select name="typemateriel" size="1" value="{{request.form['typemateriel']}}">
+                <option>Rien</option>
+                <option>Croquettes chiot</option>
+                <option>Croquettes chien adulte</option>
+                <option>Boîtes de pâtée chiot</option> 
+                <option>Boîtes de pâtée chien adulte</option>
+                <option>Panier ou autre couchage</option> 
+                <option>Accessoires de sortie</option>
+                <option>Jouets</option>
+              </select> <br> <br> <br>
+              <img src="{{ url_for('static', filename= 'attention.png') }}" alt="panneau attention" width="30" height="23"> <span class="texte-attention"> Attention faire un don vous engage. Merci de vérifier vos capacités financières. </span>
+          </div>
+        </div>
+    
+        <div class="split right">
+            <div class="centered">
+              <h1>Mes coordonnées</h1>
+              <label for="nom">Nom:</label><br>
+              <input type="text" name="nom" size="30" maxlength="1000" required="required" value="{{request.form['nom']}}"><br>
+              <label for="prenom">Prénom:</label><br>
+              <input type="text" name="prenom" size="30" maxlength="1000" required="required" value="{{request.form['prenom']}}"><br>
+              <label for="email">E-mail:</label><br>
+              <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="________@_____.__ en minuscules" size="30" maxlength="1000" required="required" value="{{request.form['email']}}"><br>
+              <label for="tel">Numéro de téléphone:</label> <br>
+              <input type="text" name="tel"  type="number" size="30" maxlength="1000" placeholder="0000000000" required="required" value="{{request.form['tel']}}"><br>
+              <input type="checkbox" id="type4" name="type4" value="Accord" required="required">
+              <label for="type4">J'ai bien pris connaissances des <a href="{{url_for('reglement')}}"> conditions</a> de dons*</label> <br> <br>
+              <a href="{{url_for('merci')}}"><button type="submit"> Envoyer  </button> </a>
+            </div>
+        </div>
+      </div>
+  </form> <br>
+  <a href="{{url_for('index')}}"><button> Retour page principale </button> </a>
+  </body>
+  
+
+</html>

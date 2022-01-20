@@ -1,0 +1,32 @@
+
+  .header {
+    padding: 23px;
+    text-align: left;
+    background: #02301e;
+    color: white;
+    font-size: 15px;
+  }
+
+
+  .fusionnage {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url("./chien8.png");
+    background-position: center;
+    padding: 7px;
+  }
+
+    .texte-reglement {
+    font-family: "Roboto";
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    opacity: 0.75;
+
+}
+
+h4 {
+    margin: 3px;
+    padding: 0;
+}

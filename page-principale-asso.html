@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style-page-principale.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>Association de défense des canidés de la ville de Brest</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Association de défense des canidés de la ville de Brest</h1>
+    </div>
+
+    <div class="marquee-rtl">
+        <div> <img src="{{ url_for('static', filename= 'coeurpatte.png') }}" alt="pattes" width="40" height="30"> Lien pour faire un don en bas de page, on compte sur vous ! Merci !! <img src="{{ url_for('static', filename= 'coeurpatte.png') }}" alt="pattes" width="40" height="30"> </div>
+    </div>
+
+    <div class="fusionnage">
+            <div class="flex-container container-left">
+                <div class="flex-item item-left">
+                    <h2>Un chien qui aboie des heures sur un balcon de la rue Jaurès ça vous énerve ?</h2> 
+                    <h3> Agissez  maintenant !</h3> 
+                    La Bretagne compte plus de 800.000 chiens et chats sur son territoire. <br>
+                    Brest est la ville bretonne qui compte le plus de chiens avec plus de 15.000 canidés répartis dans toute la ville. <br>
+                    De nombreuses associations se battent pour le respect et le bien-être animal.
+                    <h4>Et pourtant...</h4>
+                    Il continue d'exister de nombreuses dérives... 
+                        <img src="{{ url_for('static', filename= 'sos.png') }}" alt="sos" style="position:absolute;
+                        width:70px;
+                        height:70px;
+                        top:220px;
+                        left:200px;">>
+                    
+                    <ul>
+                        <li>Chiens sous-nourris</li>
+                        <li>Chiens battus</li>
+                        <li>Chiens abandonnés</li>
+                        <li>Chiens privés de sorties en extérieur</li>
+                        <li>Chiens qui vivent sur le balcon</li>
+                    </ul>
+                    <p>Plus que jamais ces chiens ont besoin de nous tous pour vivre la vie qu'ils méritent</p>
+                </div>
+                <div class="flex-item item-left">
+                   <h3>Qui sommes nous ? </h3>
+                    Créee le 26 août 2020, à l'occasion de la journée internationale du chien, notre association se situe à Brest. <br>
+                    C'est après avoir accueilli à son domicile un énième chien errant que notre présidente a décidé de fonder l'association. <br>
+                    Aujourd'hui l'Association de défense des canidés de Brest compte 8 membres et espère continuer sa croissance tant la demande est forte. <br>
+                    A l'heure actuelle nous avons recueilli 12 chiens et 4 ont été adoptés. Grâce à nos membres de nombreux autres chiens ont vu leurs conditions de vie s'améliorer.   
+                </div>
+                <div class="flex-item item-left">
+                   <h3>Nos actions </h3> 
+                    Nous recueillons les chiens abandonnés et les plaçons dans notre refuge avant de les proposer à l'adoption. <br>
+                    Les chiens recueillis sont choyés et grâce à nos généreux donnateurs nous pouvons leur offrir tout le confort et l'attention qu'ils méritent. <br>
+                    Nous avons une misson de pédagogie et de médiation auprès des détenteurs de chiens. <br>
+                    Nous menons des rondes après qu'un abus nous ait été signalé avant d'engager d'autres procédures en coopération avec les forces de l'ordre. <br>
+                    Nous distribuons du matériel (nourriture, accessoires...) aux personnes ayant peu de moyens et accompagnées d'un chien. <br>
+                </div>
+        </div>
+
+        <div class="flex-container container-right">
+            <div class="flex-item item-right">
+                <h2>Pour soutenir les chiens de la ville de Brest, trois options s'offrent à vous :    </h2>
+                <h3>1. Don de temps</h3>
+                <p>Vous pouvez aider les chiens de Brest en leur offrant de votre temps. <br> Vous pouvez : </p>
+                
+                    <li> faire des rondes avec notre groupe pour repérer les abus</li>
+                    <li> garder un animal en détresse à votre domicile</li>
+                    <li> promener des animaux en détresse</li>
+            
+                <h3>2. Don de matériel</h3>
+                <p>Vous pouvez aider les chiens de Brest en leur offrant du matériel. <br> Vous pouvez : </p>
+                
+                    <li> offrir de la nourriture</li>
+                    <li> offrir du matériel (panier, couverture, laisse, collier, jouet...)</li>
+            
+                <h3>3. Don financier</h3>
+                <p>Vous pouvez aider les chiens de Brest en leur faisant un don financier. <br> Vous pouvez : </p>
+                    <li> faire un don unique</li>
+                    <li> faire un don mensuel</li>
+                    <li> faire un don annuel</li> 
+            </div>
+            <div class="flex-item item-right">
+                <h3>Nos partenaires</h3>
+                Pour mener à bien nos missions, nous nous sommes entourés de plusieurs partenaires :
+                <li> la mairie de Brest </li>
+                <li> l'Association l'Arche de Noé </li>
+                <li> le magasin Point Dog </li>
+                <li> le toiletteur Au plaisir du chien </li>
+                <li> la SPA de Crozon </li>
+                <br>
+                <a href="https://www.brest.fr/brestfr-accueil-1575.html"><img src="{{ url_for('static', filename= 'brestville.png') }}" alt="site de la ville" width="75" height="50"></a>
+                <a href="https://arche-de-noe-brest.fr/"> <img src="{{ url_for('static', filename= 'archedenoe.png') }}" alt="site de l'Arche de Noé" width="50" height="50"></a>
+                <a href="https://www.point-dog.fr/"> <img src="{{ url_for('static', filename= 'pointdog.png') }}" alt="site de PointDog" width="75" height="50"></a>
+                <a href="http://auplaisirduchien.fr/"><img src="{{ url_for('static', filename= 'auplaisirduchien.png') }}" alt="site Au Plaisir du Chien" width="50" height="50"></a>
+                <a href="https://www.la-spa.fr/etablissement/refuge-spa-de-crozon/"> <img src="{{ url_for('static', filename= 'spa.png') }}" alt="site de la SPA" width="50" height="50"></a>
+
+            </div>
+        </div>
+            
+    </div>
+
+<div class="basbas">
+  
+<div class="bas" style="text-align:center">
+    <img src="{{ url_for('static', filename= 'begging-dog.gif') }}" alt="gif" width="100" height="100"> 
+     <a href="{{url_for('formulaire')}}"><button> <span class="debutbouton">CLIQUEZ ICI <br> ET <br></span> SAUVEZ-LES MAINTENANT</button> </a>
+    <img src="{{ url_for('static', filename= 'begging-dog.gif') }}" alt="gif" width="100" height="100">
+  </div>
+</div>
+</body>
+</html>
